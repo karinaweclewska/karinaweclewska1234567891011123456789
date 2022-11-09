@@ -1,0 +1,50 @@
+.date{
+    font-size: 70px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    padding:0; margin:0;
+}
+.nr{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;   
+    padding:0; margin:0;
+}
+.godzina{
+    font-size: 70px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    padding:0; margin:0;
+    
+    
+
+    
+}
+div {
+    padding: 10px;
+    
+}
+
+.lekcjas {
+    font-size: 40px;
+    
+    font-family: 'Roboto', sans-serif;
+    
+padding-left: 5px;
+padding-right: 5px;
+    color: rgb(0, 0, 0);
+display:inline-block;
+margin: 0 auto;
+text-align: center;
+}
+.lekcjas1 {
+    font-size: 70px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    padding:0; margin:0;
+}
+.lekcjas12 {
+    font-size: 15px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    padding:0; margin:0;
+}
