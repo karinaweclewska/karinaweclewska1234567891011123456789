@@ -6,8 +6,9 @@
 }
 .nr{
     text-align: center;
-    font-family: 'Roboto:wght@100', sans-serif;   
+    font-family: 'Roboto', sans-serif;   
     padding:0; margin:0;
+    font-weight:100;
 }
 .godzina{
     font-size: 70px;
