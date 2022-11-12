@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=style1.css>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="dis">
+    <div>
+        <p class="nr">godzina</p>
+        <p id="date" class="lekcjas1q"></p>
+     </div>
+     <div>
+     <p class="nr">Dzien tygodnia</p>
+     <p id="dotw" class="lekcjas1w">Nie</p>
+     </div>
+     <div class="dsds">
+        <p class="nr">Nr lekcji</p>
+        <p id="godzina" class="lekcjas1e">Nie</p>
+     </div>
+     <div class="dsds">
+        <p class="nr">Dlugosc przerwy</p>
+        <p id="przerwa" class="lekcjas1r">Nie</p>
+     </div>
+     <div class="dsds">
+        <p class="nr" id="dp">Pozostało</p>
+        <p id="pozostalo" class="lekcjas1t">Nie</p>
+     </div>
+     <div class="dsds2">
+        <p class="nr">Teraz</p>
+    
+        <p id="lekcjas1" class="lekcjas1y">Nie</p>
+        <p id="nres" class="lekcjas12">Nie</p>
+     </div>
+     <div class="dsds">
+        <p class="nr">Następna</p>
+        <p id="lekcjas11" class="lekcjas1u">Nie</p>
+        <p id="nres1" class="lekcjas12">Nie</p>
+     </div>
+     <p id="1"></p>
+     <p id="2"></p>
+</div>
+</body>
+<script>
+
+ d11 = "J.pol"   
+ d12 = "Biol"   
+ d13 = "Pdzp"   
+ d14 = "J.ang"   
+ d15 = "J.ros"   
+ d16 = "Plas"   
+ d17 = "Wf"   
+ d18 = "Tsiai"  
+ d19 = ""   
+
+ d21 = "Fiz"   
+ d22 = "Wdż"   
+ d23 = "Biol"   
+ d24 = "J.ang"   
+ d25 = "J.angz"   
+ d26 = "bd"   
+ d27 = "J.Pol"   
+ d28 = "Rel" 
+ d29 = ""   
+
+ d31 = "Rel"   
+ d32 = "Geo"   
+ d33 = "Inf"   
+ d34 = "His"   
+ d35 = "Pdzp"   
+ d36 = "Mat"   
+ d37 = "Pprog"   
+ d38 = "Pprog"  
+ d39 = ""  
+
+ d41 = "SiAI"   
+ d42 = "SiAI"   
+ d43 = "His"   
+ d44 = "Edb"   
+ d45 = "J.ros"   
+ d46 = "Mat"   
+ d47 = "Wf"   
+ d48 = "Bihp"  
+ d49 = ""  
+
+ d51 = "J.pol"   
+ d52 = "Mat"   
+ d53 = "Hit"   
+ d54 = "Bd"   
+ d55 = "Inf"   
+ d56 = "Zzw"   
+ d57 = "Wf"   
+ d58 = ""  
+
+
+ 
+
+
+
+
+
+
+
+
+    Object.defineProperty(String.prototype, 'capitalize', {
+  value: function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+  },
+  enumerable: false
+});
+const el = document.getElementById('date');
+
+const dateString = new Date().toLocaleTimeString("pl-PL", {
+  hour: "2-digit",
+  minute: "2-digit",
+});
+el.textContent = dateString;
+
+var godzina = new Date().getHours();
+
+
+var minuta = new Date().getMinutes();
+
+
+var minigodz = godzina * 60 + minuta
+
+
+var d11 = new Date();
+const dayOfWeekDigit = new Date().getDay();
+console.log(dayOfWeekDigit);
+
+const dayOfWeekName = new Date().toLocaleString(
+  'default', {weekday: 'long'})
+
+const el12 = document.getElementById('dotw');
+    el12.textContent = dayOfWeekName.capitalize();
+
+
+    
+
+    function nrl(x, y, z,u) {
+        if (minigodz >= x && minigodz <= y )
+{
+    const el1 = document.getElementById('godzina');
+    el1.textContent = z;
+    
+    const el11 = document.getElementById('przerwa');
+    el11.textContent = u + " min";
+    const el112 = document.getElementById('lekcjas1');
+el112.textContent = window["d" + String(dayOfWeekDigit) + String(z)];
+
+const el114 = document.getElementById('lekcjas11');
+el114.textContent = window["d" + String(dayOfWeekDigit) + String(z + 1)];
+}
+
+
+
+
+
+
+
+}
+
+function kon(x,y,z,u,n) {
+        
+if (minigodz >= x && minigodz <= y ){
+
+    const el1 = document.getElementById('pozostalo');
+    el1.textContent =  y - minigodz + " min";
+    
+const el11 = document.getElementById('dp');
+el11.textContent = "Do przerwy pozostało";
+}
+if (minigodz >= y && minigodz <= z ){
+
+const el1 = document.getElementById('pozostalo');
+el1.textContent =  z - minigodz + " min";
+
+const el11 = document.getElementById('dp');
+el11.textContent = "Do lekcji pozostało";
+
+}
+if (minigodz >= x && minigodz <= z ){
+nrlekc = u
+dprzer = n
+}
+}
+kon(430,475,480,0,5)
+kon(480,525,535,1,10)
+kon(535,580,590,2,10)
+kon(590,635,650,3,15)
+kon(650,695,705,4,10)
+kon(705,750,755,5,5)
+kon(755,800,805,6,5)
+kon(805,850,855,7,5)
+kon(855,900,8,5)
+const el1 = document.getElementById('godzina');
+nrlekc1 = nrlekc + 1
+el1.textContent = nrlekc +"-" + nrlekc1;
+const el112 = document.getElementById('przerwa');
+    el112.textContent = dprzer + " min";
+
+    const el11 = document.getElementById('lekcjas1');
+el11.textContent = window["d" + String(dayOfWeekDigit) + String(nrlekc + 1)];
+
+const el131 = document.getElementById('lekcjas11');
+el131.textContent = window["d" + String(dayOfWeekDigit) + String(nrlekc + 2)];
+
+nrl(430,475,0,5)
+nrl(480,525,1,10)
+nrl(535,580,2,10)
+nrl(590,635,3,15)
+nrl(650,695,4,10)
+nrl(705,750,5,5)
+nrl(755,800,6,5)
+nrl(805,850,7,5)
+nrl(855,995,8,5)
+
+
+
+function dos (a,b){
+    if(document.getElementById("lekcjas1").innerHTML == a){
+        const el1314 = document.getElementById('nres');
+        el1314.textContent = b; 
+    }
+}
+function dos1 (a,b){
+    if(document.getElementById("lekcjas11").innerHTML == a){
+        const el1314 = document.getElementById('nres1');
+        el1314.textContent = b; 
+    }
+}
+dos("J.pol",137)
+dos("Biol",203)
+dos("Pdzp",18)
+dos("J.ang",201)
+dos("J.ros",114)
+dos("Plas",120)
+dos("Wf","37a")
+dos("Tsiai",127)
+dos("Rel",203)
+dos("J.angz",201)
+dos("Wdż",26)
+dos("His",3)
+dos("Mat",126)
+dos("Bd",119)
+dos("Fiz",202)
+dos("Pprog",131)
+dos("Geo",103)
+dos("Edb",205)
+dos("Bihp",19)
+dos("Zzw",120)
+dos("Inf",119)
+dos("Hit",137)
+
+dos1("J.pol",137)
+dos1("Biol",203)
+dos1("Pdzp",18)
+dos1("J.ang",201)
+dos1("J.ros",114)
+dos1("Plas",120)
+dos1("Wf","37a")
+dos1("Tsiai",127)
+dos1("Rel",203)
+dos1("J.angz",201)
+dos1("Wdż",26)
+dos1("His",3)
+dos1("Mat",126)
+dos1("Bd",119)
+dos1("Fiz",202)
+dos1("Pprog",131)
+dos1("Geo",103)
+dos1("Edb",205)
+dos1("Bihp",19)
+dos1("Zzw",120)
+dos1("Inf",119)
+dos1("Hit",137)
+
+</script>
+</html>

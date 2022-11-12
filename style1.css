@@ -1,0 +1,106 @@
+.date{
+    font-size: 70px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    padding:0; margin:0;
+}
+.nr{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;   
+    padding:0; margin:0;
+    font-weight:300;
+    color: rgb(170, 170, 170);
+}
+.godzina{
+    font-size: 70px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    padding:0; margin:0;
+    
+    
+
+    
+}
+div {
+    padding: 10px;
+    
+}
+
+.lekcjas {
+    font-size: 40px;
+    
+    font-family: 'Roboto', sans-serif;
+    
+padding-left: 5px;
+padding-right: 5px;
+    color: rgb(0, 0, 0);
+display:inline-block;
+margin: 0 auto;
+text-align: center;
+}
+.lekcjas1q,
+.lekcjas1w,
+.lekcjas1e,
+.lekcjas1r,
+.lekcjas1t,
+.lekcjas1y,
+.lekcjas1u {
+        font-size: 70px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    padding:0; margin:0;
+
+    color: #fff;
+
+    border-radius: 29px;
+    padding: 11px 19px;
+    margin: 0 40px;
+    animation: animate 3s linear infinite;
+    text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff,
+      0 0 200px #0072ff;
+      
+}
+.lekcjas12 {
+    font-size: 15px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    padding:0; margin:0;
+    color: rgb(255, 255, 255);
+}
+@keyframes animate {
+    from {
+      filter: hue-rotate(0deg);
+    }
+    to {
+      filter: hue-rotate(360deg);
+    }
+  }
+  
+  .lekcjas1q {
+    animation-delay: 0.1s;
+  }
+  .lekcjas1w {
+    animation-delay: 1.8s;
+  }
+  .lekcjas1e {
+    animation-delay: 1.5s;
+  }
+
+  .lekcjas1r {
+    animation-delay: 0.3s;
+  }
+  .lekcjas1t {
+    animation-delay: 1.2;
+  }
+  .lekcjas1y {
+    animation-delay: 0.9s;
+  }
+  .lekcjas1u {
+    animation-delay: 0.6s;
+  }
+  body {
+    background-image: url("dark_meme_hot_wheels.png");
+    background-position: center; /* Center the image */
+
+    
+  }
